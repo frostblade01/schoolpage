@@ -63,20 +63,22 @@
             font-size: 16px;
         }
 
-        button {
+        .login-button {
+            display: block;
             width: 100%;
             padding: 12px;
             background-color: #387478;
             color: #FFF;
             border: none;
             border-radius: 5px;
-            cursor: pointer;
+            text-align: center;
             font-size: 16px;
             font-weight: 600;
             transition: background-color 0.3s ease;
+            text-decoration: none;
         }
 
-        button:hover {
+        .login-button:hover {
             background-color: #285a5f;
         }
 
@@ -115,7 +117,7 @@
                 padding: 10px;
             }
 
-            button {
+            .login-button {
                 padding: 10px;
             }
         }
@@ -124,18 +126,17 @@
 <body>
     <div class="login-container">
         <h1>Teacher Login</h1>
-        <form action="home.html" method="GET">
-            <div class="input-group">
-                <label for="teacher-id">Teacher ID</label>
-                <input type="text" id="teacher-id" name="teacher-id" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">Login</button>
-            <p class="message">Forgot your password? <a href="#" class="reset">Reset it here</a></p>
-        </form>
+        <div class="input-group">
+            <label for="teacher-id">Teacher ID</label>
+            <input type="text" id="teacher-id" name="teacher-id" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <a href="home.html" class="login-button">Login</a>
+        <p class="message">Forgot your password? <a href="#" class="reset">Reset it here</a></p>
     </div>
 </body>
 </html>
+
